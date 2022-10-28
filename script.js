@@ -8,24 +8,29 @@ function getComputerChoice() {
 
 //console.log(getComputerChoice());
 
-const playerSelection = "paper";
+const playerSelection = "ROCK";
 const computerSelection = getComputerChoice();
 
 function playRound(playerSelection, computerSelection) {
-    if(playerSelection.toLowerCase() === "Rock" && computerSelection === "Paper") {
-        return "Computer wins!";
-    } else if (playerSelection.toLowerCase() === "Rock" && computerSelection === "Scissors") {
-        return "Player wins!";
-    } else if (playerSelection.toLowerCase() === "Paper" && computerSelection === "Rock") {
-        return "Player wins!";
-    } else if (playerSelection.toLowerCase() === "Paper" && computerSelection === "Scissors") {
-        return "Computer wins!";
-    } else if (playerSelection.toLowerCase() === "Scissors" && computerSelection === "Rock") {
-        return "Computer wins!";
-    } else if (playerSelection.toLowerCase() === "Scissors" && computerSelection === "Paper") {
-        return "Player wins!";
+    let rock = "Rock";
+    let paper = "Paper";
+    let scissors = "Scissors";
+
+    if(playerSelection.toLowerCase() === rock.toLowerCase() && computerSelection === "Paper") {
+        return "Computer wins! Paper beats Rock";
+    } else if (playerSelection.toLowerCase() === rock.toLowerCase() && computerSelection === "Scissors") {
+        return "Player wins! Rock beats Scissors";
+    } else if (playerSelection.toLowerCase() === paper.toLowerCase() && computerSelection === "Rock") {
+        return "Player wins! Paper beats Rock";
+    } else if (playerSelection.toLowerCase() === rock.toLowerCase() && computerSelection === "Scissors") {
+        return "Computer wins! Scissors beats Paper";
+    } else if (playerSelection.toLowerCase() === scissors.toLowerCase() && computerSelection === "Rock") {
+        return "Computer wins! Rock beats Scissors";
+    } else if (playerSelection.toLowerCase() === scissors.toLowerCase() && computerSelection === "Paper") {
+        return "Player wins! Scissors beats Paper";
     } else {
         return "it's a tie!"
     }
 }
+
 console.log(playRound(playerSelection, computerSelection));
