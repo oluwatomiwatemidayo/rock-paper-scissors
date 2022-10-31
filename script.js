@@ -8,7 +8,7 @@ function getComputerChoice() {
 
 //console.log(getComputerChoice());
 
-const playerSelection = "ROCK";
+const playerSelection = " ";
 const computerSelection = getComputerChoice();
 
 function playRound(playerSelection, computerSelection) {
@@ -35,4 +35,10 @@ function playRound(playerSelection, computerSelection) {
 
 //console.log(playRound(playerSelection, computerSelection));
 
-function game() {}
+//const gameRecord = playRound(playerSelection, computerSelection);
+
+function game() {
+    for (let i = 0; i < 5; i++) {}
+}
+
+game();
