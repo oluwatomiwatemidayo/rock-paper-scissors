@@ -2,8 +2,8 @@
 const OPTIONS = ['Rock', 'Paper', 'Scissors'];
 
 function getComputerChoice() {
-    let words = OPTIONS[Math.floor(Math.random()*OPTIONS.length)];
-    return words;
+    let computerChoice = OPTIONS[Math.floor(Math.random()*OPTIONS.length)];
+    return computerChoice;
 }
 
 //console.log(getComputerChoice());
@@ -19,6 +19,7 @@ function playRound(playerSelection, computerSelection) {
     if(playerSelection.toLowerCase() === rock.toLowerCase() && computerSelection === "Paper") {
         computerScore++;
         console.log("Computer wins! Paper beats Rock");
+        //return "Computer wins! Paper beats Rock";
     } else if (playerSelection.toLowerCase() === rock.toLowerCase() && computerSelection === "Scissors") {
         playerScore++;
         console.log("Player wins! Rock beats Scissors");
@@ -27,7 +28,7 @@ function playRound(playerSelection, computerSelection) {
         playerScore++;
         console.log("Player wins! Paper beats Rock");
         //return "Player wins! Paper beats Rock";
-    } else if (playerSelection.toLowerCase() === rock.toLowerCase() && computerSelection === "Scissors") {
+    } else if (playerSelection.toLowerCase() === paper.toLowerCase() && computerSelection === "Scissors") {
         computerScore++;
         console.log("Computer wins! Scissors beats Paper");
        // return "Computer wins! Scissors beats Paper";
@@ -62,7 +63,7 @@ function game() {
     if (playerScore > computerScore) {
         console.log(`Congratulations! player wins ${playerScore} : ${computerScore}`);
     } else if (playerScore < computerScore) {
-        console.log(`Oops! computer wins ${computerScore} : ${playerScore}`);
+        console.log(`Oops! computer wins ${playerScore} : ${computerScore}`);
     } else {
         console.log(`Draw! ${playerScore} : ${computerScore}`);
     }
