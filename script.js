@@ -52,7 +52,7 @@ let playerScore = 0;
 let computerScore = 0;
 
 function game() {
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 1; i++) {
         const playerSelection = prompt("Rock, Paper or Scissors: ", "Rock");
         const computerSelection = getComputerChoice();
 
