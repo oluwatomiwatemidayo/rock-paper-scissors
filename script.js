@@ -1,3 +1,6 @@
+let playerScore = 0;
+let computerScore = 0;
+let result = document.querySelector('#result');
 const OPTIONS = ['Rock', 'Paper', 'Scissors'];
 
 function getComputerChoice() {
@@ -29,55 +32,31 @@ scissorsBtn.addEventListener('click', () => {
 function playRound(playerSelection, computerSelection) {
 
     if(playerSelection === "Rock" && computerSelection === "Paper") {
-        let result = document.querySelector('#result');
-        result.textContent = `Computer wins! Paper beats Rock  ${playerScore} : ${computerScore}`;
         computerScore++;
+        result.textContent = `Computer wins! Paper beats Rock  ${playerScore} : ${computerScore}`; 
     } else if (playerSelection === "Rock" && computerSelection === "Scissors") {
-        let result = document.querySelector('#result');
+        playerScore++;
         result.textContent = `Player wins! Rock beats Scissors  ${playerScore} : ${computerScore}`;
-        playerScore++;
     } else if (playerSelection === "Paper" && computerSelection === "Rock") {
-        let result = document.querySelector('#result');
-        result.textContent = `Player wins! Paper beats Rock  ${playerScore} : ${computerScore}`;
         playerScore++;
+        result.textContent = `Player wins! Paper beats Rock  ${playerScore} : ${computerScore}`;
     } else if (playerSelection === "Paper" && computerSelection === "Scissors") {
+        computerScore++;
         let result = document.querySelector('#result');
         result.textContent = `Computer wins! Scissors beats Paper  ${playerScore} : ${computerScore}`;
-        computerScore++;
     } else if (playerSelection === "Scissors" && computerSelection === "Rock") {
-        let result = document.querySelector('#result');
-        result.textContent = `Computer wins! Rock beats Scissors  ${playerScore} : ${computerScore}`;
         computerScore++;
+        result.textContent = `Computer wins! Rock beats Scissors  ${playerScore} : ${computerScore}`;
     } else if (playerSelection === "Scissors" && computerSelection === "Paper") {
-        let result = document.querySelector('#result');
-        result.textContent = `Player wins! Scissors beats Paper  ${playerScore} : ${computerScore}`;
         playerScore++;
+        result.textContent = `Player wins! Scissors beats Paper  ${playerScore} : ${computerScore}`;
     } else {
-        let result = document.querySelector('#result');
-        result.textContent = "it's a tie!";
+        result.textContent = `it's a tie!  ${playerScore} : ${computerScore}`;
+    }
+
+    if (playerScore === 5 && computerScore < 5) {
+        result.textContent = `Congratulations! player wins ${playerScore} : ${computerScore}`;
+    } else if (playerScore < 5 && computerScore === 5) {
+        result.textContent = `Oops! computer wins ${playerScore} : ${computerScore}`;
     }
 }
-
-let playerScore = 0;
-let computerScore = 0;
-
-/**function game() {
-    for (let i = 0; i < 1; i++) {
-        //const playerSelection = prompt("Rock, Paper or Scissors: ", "Rock");
-        const playerSelection = getPlayerChoice();
-        const computerSelection = getComputerChoice();
-
-        playRound(playerSelection, computerSelection);
-
-    }
-
-    if (playerScore > computerScore) {
-        console.log(`Congratulations! player wins ${playerScore} : ${computerScore}`);
-    } else if (playerScore < computerScore) {
-        console.log(`Oops! computer wins ${playerScore} : ${computerScore}`);
-    } else {
-        console.log(`Draw! ${playerScore} : ${computerScore}`);
-    }
-}
-
-game(); **/
