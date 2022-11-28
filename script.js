@@ -26,42 +26,37 @@ scissorsBtn.addEventListener('click', () => {
     playRound(playerSelection, computerSelection);
 });
 
-//console.log(getComputerChoice());
-//console.log(getPlayerChoice());
-
 function playRound(playerSelection, computerSelection) {
 
     if(playerSelection === "Rock" && computerSelection === "Paper") {
+        let result = document.querySelector('#result');
+        result.textContent = "Computer wins! Paper beats Rock";
         computerScore++;
-        console.log("Computer wins! Paper beats Rock");
-        //return "Computer wins! Paper beats Rock";
     } else if (playerSelection === "Rock" && computerSelection === "Scissors") {
+        let result = document.querySelector('#result');
+        result.textContent = "Player wins! Rock beats Scissors";
         playerScore++;
-        console.log("Player wins! Rock beats Scissors");
-       // return "Player wins! Rock beats Scissors";
     } else if (playerSelection === "Paper" && computerSelection === "Rock") {
+        let result = document.querySelector('#result');
+        result.textContent = "Player wins! Paper beats Rock";
         playerScore++;
-        console.log("Player wins! Paper beats Rock");
-        //return "Player wins! Paper beats Rock";
     } else if (playerSelection === "Paper" && computerSelection === "Scissors") {
+        let result = document.querySelector('#result');
+        result.textContent = "Computer wins! Scissors beats Paper";
         computerScore++;
-        console.log("Computer wins! Scissors beats Paper");
-       // return "Computer wins! Scissors beats Paper";
     } else if (playerSelection === "Scissors" && computerSelection === "Rock") {
+        let result = document.querySelector('#result');
+        result.textContent = "Computer wins! Rock beats Scissors";
         computerScore++;
-        console.log("Computer wins! Rock beats Scissors");
-       // return "Computer wins! Rock beats Scissors";
     } else if (playerSelection === "Scissors" && computerSelection === "Paper") {
+        let result = document.querySelector('#result');
+        result.textContent = "Player wins! Scissors beats Paper";
         playerScore++;
-        console.log("Player wins! Scissors beats Paper");
-        //return "Player wins! Scissors beats Paper";
     } else {
-        console.log("it's a tie!");
-       // return "it's a tie!"
+        let result = document.querySelector('#result');
+        result.textContent = "it's a tie!";
     }
 }
-
-//console.log(playRound(playerSelection, computerSelection));
 
 let playerScore = 0;
 let computerScore = 0;
