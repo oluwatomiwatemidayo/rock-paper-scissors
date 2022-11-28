@@ -30,27 +30,27 @@ function playRound(playerSelection, computerSelection) {
 
     if(playerSelection === "Rock" && computerSelection === "Paper") {
         let result = document.querySelector('#result');
-        result.textContent = "Computer wins! Paper beats Rock";
+        result.textContent = `Computer wins! Paper beats Rock  ${playerScore} : ${computerScore}`;
         computerScore++;
     } else if (playerSelection === "Rock" && computerSelection === "Scissors") {
         let result = document.querySelector('#result');
-        result.textContent = "Player wins! Rock beats Scissors";
+        result.textContent = `Player wins! Rock beats Scissors  ${playerScore} : ${computerScore}`;
         playerScore++;
     } else if (playerSelection === "Paper" && computerSelection === "Rock") {
         let result = document.querySelector('#result');
-        result.textContent = "Player wins! Paper beats Rock";
+        result.textContent = `Player wins! Paper beats Rock  ${playerScore} : ${computerScore}`;
         playerScore++;
     } else if (playerSelection === "Paper" && computerSelection === "Scissors") {
         let result = document.querySelector('#result');
-        result.textContent = "Computer wins! Scissors beats Paper";
+        result.textContent = `Computer wins! Scissors beats Paper  ${playerScore} : ${computerScore}`;
         computerScore++;
     } else if (playerSelection === "Scissors" && computerSelection === "Rock") {
         let result = document.querySelector('#result');
-        result.textContent = "Computer wins! Rock beats Scissors";
+        result.textContent = `Computer wins! Rock beats Scissors  ${playerScore} : ${computerScore}`;
         computerScore++;
     } else if (playerSelection === "Scissors" && computerSelection === "Paper") {
         let result = document.querySelector('#result');
-        result.textContent = "Player wins! Scissors beats Paper";
+        result.textContent = `Player wins! Scissors beats Paper  ${playerScore} : ${computerScore}`;
         playerScore++;
     } else {
         let result = document.querySelector('#result');
