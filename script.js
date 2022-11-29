@@ -42,7 +42,6 @@ function playRound(playerSelection, computerSelection) {
         result.textContent = `Player wins! Paper beats Rock  ${playerScore} : ${computerScore}`;
     } else if (playerSelection === "Paper" && computerSelection === "Scissors") {
         computerScore++;
-        let result = document.querySelector('#result');
         result.textContent = `Computer wins! Scissors beats Paper  ${playerScore} : ${computerScore}`;
     } else if (playerSelection === "Scissors" && computerSelection === "Rock") {
         computerScore++;
